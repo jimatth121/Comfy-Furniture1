@@ -1,0 +1,43 @@
+.slidemenu{
+    position: absolute;
+    width: 150px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(33,39,74);
+    left: -100%;
+    top: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color:  white;
+    transition: all 500ms ease-in;
+}
+
+.slide__true{
+    left: 0;
+}
+
+.slidemenu button{
+    padding: .5rem;
+    border: 0;
+    border-radius: 5px;
+    padding-inline: 1rem;
+    background-color: rgb(233, 148, 83);
+    color: white;
+    letter-spacing: 3px;
+}
+
+@media screen and (min-width:1200px){
+    .slidemenu{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width:600px){
+    .slidemenu{
+        width: 50%;
+    }
+}

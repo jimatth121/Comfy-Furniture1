@@ -1,0 +1,14 @@
+.app{
+  position: relative;
+  overflow-x: hidden;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.wrapper{
+  position: relative;
+  overflow: hidden;
+}
+

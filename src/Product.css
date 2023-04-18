@@ -1,0 +1,133 @@
+.product{
+    box-shadow: 0 0 0.5rem rgba(137,38,40,.6);
+    background-color: #fff;
+    padding-bottom: 2rem;
+    align-self: left;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-basis: 30%;
+    min-width: 250px;
+    /* height: 400px; */
+    /* max-width: 350PX; */
+    flex-grow: 1;
+    margin-bottom: 1em;
+    /* background-color: burlywood; */
+
+
+}
+
+.product img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+.product__info{
+    width: 100%;
+    /* height: 100px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: .5rem;
+    margin-top: .4rem;
+}
+
+.product__info h3{
+    font-size: 17px;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.product__info h2{
+    font-size: 20px;
+    font-weight: 400;
+    color:rgb(233, 148, 83);
+}
+
+.button__container{
+    display: flex;
+    gap: 3rem;
+}
+
+.button__container .MuiSvgIcon-root{
+    font-size: 20px;
+}
+
+
+.image__wrap {
+position: relative;
+}
+
+.button__container1{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    display: block;
+    /* gap: 8rem; */
+    margin: 0 auto;
+    /* background-color: red; */
+    align-self: center;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+}
+.inner__wrap{
+    display:flex ;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 0.2;
+    transition: all 200ms ease-in;
+}
+
+.button__container1{
+    display: none;
+}
+.image__wrap:hover .button__container1{
+    visibility: visible;
+    transition: all 300ms ease-in;
+}
+
+.image__wrap:hover .inner__wrap{
+    width: 100%;
+    max-width: 60%;
+    transition: all 200ms ease-in;
+    opacity: 1;
+    /* transition: none; */
+}
+.alert__container{
+    position: absolute;
+    top: 50%;
+}
+@media screen and (min-width:1200px){
+   .product__info .button__container{
+        display:none;
+    }
+
+    .button__container1{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        left: 0;
+        display: block;
+        /* gap: 8rem; */
+        margin: 0 auto;
+        /* background-color: red; */
+        align-self: center;
+        top: 200px;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+    }
+}
+

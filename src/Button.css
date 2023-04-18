@@ -1,0 +1,12 @@
+.button__container button{
+    padding: .5rem;
+    border: 0;
+    border-radius: 5px;
+    padding-inline: 1rem;
+    background-color: rgb(233, 148, 83);
+    color: white;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

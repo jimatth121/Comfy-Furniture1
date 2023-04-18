@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.menu{
+    display: none;
+    width: 400px;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    letter-spacing: 3px;
+
+
+}
+
+.menu button{
+    padding: .5rem;
+    border: 0;
+    border-radius: 5px;
+    padding-inline: 1rem;
+    background-color: rgb(233, 148, 83);
+    color: white;
+    letter-spacing: 3px;
+}
+
+.menucart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__holder1{
+    display: none;
+}
+.menuicon .MuiSvgIcon-root{
+color: black;
+font-size: 30px;
+}
+
+.cart .MuiSvgIcon-root{
+    font-size: 30px;  
+}
+
+.cart{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+}
+.cartnumber{
+    position: absolute;
+    background-color: rgb(233, 148, 83);
+    border-radius: 40%;
+   left: 30px;
+   top: -10px;
+    color: white;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1200px){
+    .logo__holder1{
+        display: flex;
+    }
+    .menuicon{
+    display: none;
+    }
+    .logo__header2{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    .menucart{
+        width: 50%;
+    }
+}

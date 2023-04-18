@@ -1,0 +1,86 @@
+.sidebar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* padding-right: 2rem; */
+}
+.sidebar__search input{
+    border: 1px solid #333;
+    height: 25px;
+    padding: 10px 5px ;
+    border-radius: 5px;
+}
+.sidebar__search input:focus{
+    outline: none;
+}
+
+.sidebar__btn{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: .5rem;
+}
+
+.sidebar__btn button{
+    display: block;
+    padding: .5rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.price__range{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.rangetitle, .btnheader, .rangevalue{
+    color:  #892628; 
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.price__range p{
+    letter-spacing: 1px;
+    color:  #892628; 
+
+
+}
+
+@media screen and (max-width:1200px){
+    .sidebar{
+           flex-direction: row;
+           width: 100%;
+           justify-content: space-around;
+           align-content: center;
+           padding-inline:2rem ;
+           flex-wrap: wrap;
+
+
+    }
+
+    .sidebar__btn{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .rangetitle, .btnheader, .rangevalue{
+        color:  #892628; 
+        font-weight: 0;
+        letter-spacing: 0;
+        font-size: 12px;
+    }
+    .price__range p{
+        letter-spacing: 0;
+        color:  #892628; 
+        font-size: 12px;
+    }
+
+    .sidebar__btn button{
+        font-size: 12px;
+    }
+}

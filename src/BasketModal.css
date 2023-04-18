@@ -1,0 +1,105 @@
+
+.basket__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    z-index: 99;
+    background-color: rgba(233, 148, 83,.3);
+    /* backdrop-filter: blur(3px); */
+    overflow: hidden;  
+    padding: 2rem;
+    transition: all 300ms ease-in;
+}
+
+.hide__modal{
+    left: 100%;
+}
+
+.empty__modal{
+    flex-basis: 70%;
+}
+.modal{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    min-height: 100vh;
+    flex-basis: 30%;
+    width: 100%;
+    /* padding: 0rem 1.5rem; */
+    overflow: hidden;
+    transition: all 300ms ease-in;
+    transition: left 300ms ease-in;
+
+}
+
+/* .changeposition{
+    position: absolute;
+    transition:  300ms ease-in;
+} */
+
+.inner__modal{
+    padding-top: 1rem;
+    width: 100%;
+    background-color:white;
+    overflow-y: auto;
+    height: 100%;
+    min-height: auto;
+    padding: 1.5rem;
+    overflow: scroll;
+}
+
+.inner__modal::-webkit-scrollbar {
+    width: 5px;
+}
+.inner__modal::-webkit-scrollbar-track {
+    background-color: darkgrey;
+  }
+  .inner__modal::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .modal__header p{
+    font-size: 14px;
+    line-height: 1.4rem;
+    font-weight: 500;
+  }
+  .colorL{
+    color:rgb(233, 148, 83) ;
+  }
+  .colorD{
+    color:  rgb(137,38,40);
+  }
+  .modal__btn{
+    padding:.8rem 1rem;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(233, 148, 83);
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .cancelModal{
+    display: flex;
+    justify-content: end;
+  }
+
+  @media screen and (min-width:600px){
+
+    .modal{
+        width: 50%;
+    }
+  }
+
+  @media screen and (min-width:900px){
+
+    .modal{
+        width: 38%;
+    }
+  }

@@ -1,0 +1,72 @@
+.cartcard{
+    width: 100%;
+    max-width: 350px;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid   rgb(137,38,40);
+}
+.split{
+    display: flex;
+    gap: 1rem;
+    /* width: 100%; */
+}
+.split .image__con{
+    flex-basis: 65%;
+}
+
+.image__con img{
+    width: 100%;
+}
+.split .text__con{
+    flex-basis: 30%;
+}
+
+.title{
+    color:  rgb(137,38,40);
+}
+
+.price{
+    display: block;
+    color: rgb(233, 148, 83);
+
+}
+.smallbtns > button{
+    border: 0;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: .2rem 1.2rem;
+    color: #333;
+    /* font-size: 10px; */
+    font-weight: 900;
+
+}
+.smallbtns .MuiSvgIcon-root{
+    font-size: 18px;
+}
+.smallbtns > span{
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 400;
+    /* padding-bottom: 5rem; */
+}
+.smallbtns{
+    display: inline-block;
+    border: 1px solid rgb(137,38,40);
+    border-radius: 4px;
+    margin-top: .5rem;
+}
+.bigbtns{
+    display:flex; 
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.bigbtns > button{
+    border: 0;
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #333;
+}
+
+.cartcard hr{
+    margin-top: 1rem;
+}
