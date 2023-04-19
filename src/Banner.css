@@ -14,7 +14,7 @@
 }
 .banner__text h1{
     text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     line-height: 4rem;
     letter-spacing: .05em;
@@ -23,13 +23,13 @@
 }
 .banner__text p{
     letter-spacing: 1px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #333;
 }
 
 .banner__text button{
     border: 0;
-    padding: .7rem 1.5rem;
+    padding: .3rem 1.2rem;
     margin-top: .5rem;
     border-radius: 3px;
     font-size: 1.2rem;
@@ -107,6 +107,23 @@
 
     .banner__text, .banner__img{
         flex-basis: 50%;
+    }
+    .banner__text h1{
+        font-size: 3rem;
+    }
+
+    .banner__text p{
+        font-size: 1.3rem;
+    }
+
+    .banner__text button{
+        border: 0;
+        padding: .7rem 1.5rem;
+        margin-top: .5rem;
+        border-radius: 3px;
+        font-size: 1.2rem;
+        color: white;
+        background-color: #e99453;
     }
     
 
