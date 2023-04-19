@@ -5,21 +5,37 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PageviewIcon from "@mui/icons-material/Pageview";
 import { useStateValue } from "./StateProvider";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Product = ({ title, image, price, id }) => {
   const [basket, dispatch] = useStateValue();
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(null);
+
+
+
+  useEffect(()=>{
+  const matTimeOut =   setTimeout(() => {
+      setShowAlert(null)
+    }, 1000);
+
+    return () => {
+      clearTimeout(matTimeOut);
+    };
+
+  },[showAlert])
+
+
 
   const handleAddToCart = () => {
-      setShowAlert(true)
-    const isadded = false;
-    if(!isadded){
 
-    }else{
-
+      
+    if(!!basket.basket.find(el => el.title === title)){
+      setShowAlert(2)
+      return
     }
-    // console.log("marwefbwufwbeuf");
+
+    setShowAlert(1)
+
     dispatch({
       type: "ADD_TO_BASKET",
       payload: {
@@ -29,6 +45,8 @@ const Product = ({ title, image, price, id }) => {
         qty: 1,
       },
     });
+
+
   };
   const navigate = useNavigate();
   const handleViewItem = () => {
@@ -48,7 +66,16 @@ const Product = ({ title, image, price, id }) => {
   return (
     <div className="product">
       <div className="image__wrap">
-        <div className="alert__container">{showAlert? <p>item add to cart</p>: '' }</div>
+      {showAlert === 1 &&
+        <div className="alert__container flex justify-center items-center w-full"> <p className="bg-green-600 px-2 py-1 rounded text-white shadow-sm transition-all">Item add to cart</p></div>
+        
+      }
+      
+      {showAlert === 2 &&
+        <div className="alert__container flex justify-center items-center w-full"> <p className="bg-red-600 px-2  py-1 rounded text-white shadow-sm transition-all">Item already in cart</p></div>
+        
+      }
+
         <img src={image} />
         <div className="button__container1">
           <div className="inner__wrap">

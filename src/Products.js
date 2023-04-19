@@ -42,6 +42,12 @@ const Products = ({ myData }) => {
     return newData;
   };
 
+  const onInputRange = (val) => {
+    console.log("input value pop", val);
+    setNewData(myData.filter((data) => data.price <= val));
+    return newData;
+  };
+
   return (
     <div className="container">
       <div className="side__bar">
@@ -52,6 +58,7 @@ const Products = ({ myData }) => {
           onClickLiddy={displayLiddy}
           onClickCaressa={displayCaressa}
           onInputchange={onInputchange}
+          onInputRange={onInputRange}
         />
       </div>
       <div className="main">

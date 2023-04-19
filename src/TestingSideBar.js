@@ -9,12 +9,25 @@ const TestingSideBar = ({
   onClickMarcos,
   onClickLiddy,
   onInputchange,
+  onInputRange
 }) => {
   const [itemInput, setItemInput] = useState("");
   const handleInputChange = (e) => {
     setItemInput(e.target.value);
     // console.log(itemInput);
     onInputchange(e.target.value);
+  };
+
+  // const handleInputRanges = (e) => {
+  //   onInputRange(e.target.value)
+  // }
+
+  const [rangeValue, setRangeValue] = useState(0);
+  const handleRangeChange = (e) => {
+    setRangeValue(e.target.value);
+    console.log(rangeValue);
+    onInputRange(e.target.value)
+
   };
 
   return (
@@ -43,9 +56,9 @@ const TestingSideBar = ({
       </div>
       <div className="price__range">
         <span className="rangetitle">Price range</span>
-        <input className="rangeinput" type="range" min={0} max={100} />
+        <input className="rangeinput" onChange={handleRangeChange} value={rangeValue} type="range" min={0} max={100} />
         <p>
-          Value:$<span className="rangevalue"></span>100
+          Value:$<span className="rangevalue"></span>{rangeValue}
         </p>
       </div>
     </div>
