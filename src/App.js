@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./Header";
 import SlideMenu from "./SlideMenu";
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Home from "./Home";
 import Products from "./Products";
 import BasketModal from "./BasketModal";
@@ -162,69 +162,36 @@ function App() {
   };
   const [showMenu, setShow] = useState(false);
   return (
+        <BrowserRouter>
     <div className="App">
       <div className="wrapper">
-        {/* <ViewItem/> */}
-        <BrowserRouter>
-          {/* <Header
-            onState={showMenu}
-            onMenuIconClick={setShow}
-            onShowModal={handleModal}
-          />
-          <SlideMenu onState={showMenu} />
-          <BasketModal onCancelModal={handleModal} showModal={showModal} /> */}
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Header
-                    onState={showMenu}
-                    onMenuIconClick={setShow}
-                    onShowModal={handleModal}
-                  />
-                  <SlideMenu onState={showMenu} />
-                  <BasketModal
-                    onCancelModal={handleModal}
-                    showModal={showModal}
-                  />
-
-                  <Home />
-                </>
-              }
-            ></Route>
-            <Route
-              path="/testing"
-              element={
-                <>
-                  <Header
-                    onState={showMenu}
-                    onMenuIconClick={setShow}
-                    onShowModal={handleModal}
-                  />
-                  <SlideMenu onState={showMenu} />
-                  <BasketModal
-                    onCancelModal={handleModal}
-                    showModal={showModal}
-                  />
-                  <Products myData={myData} />
-                </>
-              }
-            ></Route>
-
-            <Route
-              path="/viewitem/:id/:title"
-              element={
-                <>
-                  <ViewItem />
-                </>
-              }
-            ></Route>
-          </Routes>
-        </BrowserRouter>
+            
+          <Routes >
+            <Route path="/">
+              <Route element={<Layout  showMenu={showMenu} setShow={setShow} handleModal={handleModal} showModal={showModal} />}>
+                <Route index element={ <Home /> }/>
+                <Route path="testing" element={ <Products myData={myData} />}/>
+              </Route>
+            <Route path="viewitem/:id/:title" element={<> <ViewItem /> </>}></Route>
+          </Route>
+            </Routes>
       </div>
     </div>
+        </BrowserRouter>
   );
 }
 
 export default App;
+
+
+const Layout = ({showMenu,setShow,handleModal, showModal})=>{
+
+  console.log(showMenu)
+
+  return <>
+  <Header  onState={showMenu} onMenuIconClick={setShow} onShowModal={handleModal}/>
+            <SlideMenu onState={showMenu  } />
+            <BasketModal onCancelModal={handleModal} showModal={showModal}/>
+            <Outlet/>
+  </>
+}

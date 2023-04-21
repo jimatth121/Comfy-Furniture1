@@ -14,6 +14,8 @@ const Header = ({onState, onMenuIconClick, onShowModal }) => {
 // const cartnumber =  basket.length? basket?.reduce((acumulator, currentValue)=> acumulator + currentValue.qty,0 ):0 
 
 
+
+ console.log(onShowModal  )
     const handleMenuClick = () =>{
         // console.log('dasbdhasbha')
         if(onState){

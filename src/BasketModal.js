@@ -5,6 +5,7 @@ import CartCard from "./CartCard";
 import { useStateValue } from "./StateProvider";
 
 const BasketModal = ({ onCancelModal, showModal }) => {
+  console.log("Modal", onCancelModal, "Moadl 2", showModal);
   const [{ basket,}, dispatch] = useStateValue();
   const total = basket.length
     ? basket?.reduce(
