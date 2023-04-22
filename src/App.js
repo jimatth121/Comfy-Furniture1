@@ -190,7 +190,7 @@ const Layout = ({showMenu,setShow,handleModal, showModal})=>{
 
   return <>
   <Header  onState={showMenu} onMenuIconClick={setShow} onShowModal={handleModal}/>
-            <SlideMenu onState={showMenu  } />
+            <SlideMenu onState={showMenu  } onMenuIconClick={setShow} />
             <BasketModal onCancelModal={handleModal} showModal={showModal}/>
             <Outlet/>
   </>
