@@ -17,8 +17,8 @@ const ViewItem = () => {
   const product = myData.find((item) => item.id === +id);
   const viewItem = product;
   return (
-    <div className="viewitem">
-      <div className="inner__container">
+    <div className="viewitem ">
+      <div className="inner__container flex-col sm:flex-row max-h-[70%] sm:max-h-[40%]">
         <div className="image__container">
           <img src={viewItem?.image} alt="image item" />
         </div>

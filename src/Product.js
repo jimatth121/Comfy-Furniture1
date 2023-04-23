@@ -50,7 +50,6 @@ const Product = ({ title, image, price, id }) => {
   };
   const navigate = useNavigate();
   const handleViewItem = () => {
-    console.log("working");
     dispatch({
       type: "VIEW__ITEM",
       payload: {
@@ -99,7 +98,7 @@ const Product = ({ title, image, price, id }) => {
       <div className="product__info">
         <div className="button__container">
           <span className="left__button">
-            <Button>
+            <Button onClick={handleViewItem}>
               View
               <PageviewIcon />
             </Button>

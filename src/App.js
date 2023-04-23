@@ -172,7 +172,7 @@ function App() {
                 <Route index element={ <Home /> }/>
                 <Route path="testing" element={ <Products myData={myData} />}/>
               </Route>
-            <Route path="viewitem/:id/:title" element={<> <ViewItem /> </>}></Route>
+            <Route path="viewitem/:id/:title" element={ <ViewItem /> }></Route>
           </Route>
             </Routes>
       </div>
