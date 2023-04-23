@@ -32,7 +32,7 @@
     align-items: center;
     /* justify-content: center; */
     gap: .5rem;
-    margin-top: .4rem;
+    margin-top: 1rem;
 }
 
 .product__info h3{

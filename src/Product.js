@@ -104,7 +104,7 @@ const Product = ({ title, image, price, id }) => {
             </Button>
           </span>
           <span className="right__button">
-            <Button onClick={handleAddToCart}>
+            <Button className="" onClick={handleAddToCart}>
               Add
               <ShoppingCartIcon />
             </Button>

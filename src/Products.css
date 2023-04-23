@@ -46,13 +46,14 @@ padding-inline: 2rem;
 @media screen and (max-width:640px){
     .main{
             grid-template-columns: 1fr ;
+            /* padding: 1rem; */
 
     }
 }
 
 @media screen and (max-width:600px){
     .container{
-        padding-inline: 1rem;
+        padding-inline: 2rem;
     }
     .side__bar{
         padding-inline: 0;
