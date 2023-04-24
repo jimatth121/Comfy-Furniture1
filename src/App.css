@@ -1,3 +1,4 @@
+
 .app{
   position: relative;
   overflow-x: hidden;
@@ -5,6 +6,7 @@
 
 body{
   overflow-x: hidden;
+ scroll-behavior: smooth;
 }
 
 .wrapper{

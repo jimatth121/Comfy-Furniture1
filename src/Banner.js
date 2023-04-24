@@ -1,5 +1,6 @@
 import React from 'react'
 import './Banner.css'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
   return (
@@ -8,7 +9,9 @@ const Banner = () => {
             <div className="banner__content_wrap">
                 <h1>Your' are Home UnWined Relax Rest</h1>
                 <p>Embrace Your choice - We do</p>
+                <a href='#homeproduct'>
                 <button>Shop Now</button>
+                </a>
             </div>
         </div>
         <div className='banner__img'>

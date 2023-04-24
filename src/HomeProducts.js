@@ -25,7 +25,7 @@ const HomeProducts = () => {
 
 
   return (
-    <div className='home__products'>
+    <div className='home__products' id='homeproduct'>
        
        <h2>
         We Feature Products That Makes Really Feels Like Home
@@ -37,7 +37,7 @@ const HomeProducts = () => {
        </div>
 
     <div className='checkmore'>
-      <Link to='/testing'  style={{textDecoration:'none'}}>
+      <Link to='/products'  style={{textDecoration:'none'}}>
       <button onClick={scrollToTop}>Check more products 
         <ArrowForwardIcon/>
       </button>

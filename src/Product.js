@@ -50,14 +50,14 @@ const Product = ({ title, image, price, id }) => {
   };
   const navigate = useNavigate();
   const handleViewItem = () => {
-    dispatch({
-      type: "VIEW__ITEM",
-      payload: {
-        title,
-        image,
-        price,
-      },
-    });
+    // dispatch({
+    //   type: "VIEW__ITEM",
+    //   payload: {
+    //     title,
+    //     image,
+    //     price,
+    //   },
+    // });
     navigate(`/viewitem/${id}/${title.replace(/ /g, "-")}`);
   };
 

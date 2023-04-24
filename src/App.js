@@ -170,7 +170,7 @@ function App() {
             <Route path="/">
               <Route element={<Layout  showMenu={showMenu} setShow={setShow} handleModal={handleModal} showModal={showModal} />}>
                 <Route index element={ <Home /> }/>
-                <Route path="testing" element={ <Products myData={myData} />}/>
+                <Route path="products" element={ <Products myData={myData} />}/>
               </Route>
             <Route path="viewitem/:id/:title" element={ <ViewItem /> }></Route>
           </Route>

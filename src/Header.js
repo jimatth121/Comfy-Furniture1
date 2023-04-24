@@ -48,7 +48,7 @@ const Header = ({onState, onMenuIconClick, onShowModal }) => {
          <Link to='/'  style={{textDecoration: 'none'}}>
           <span>Home</span>
          </Link>
-         <Link to='/testing' style={{textDecoration: 'none'}}>
+         <Link to='/products' style={{textDecoration: 'none'}}>
           <span>Products</span>
          </Link>
           <span>

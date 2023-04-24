@@ -62,13 +62,13 @@ const basketReducer = (state, action) => {
    return{...state, basket:newState}
   }
 
-  if(action.type === 'VIEW__ITEM'){
-    console.log(action.payload)
-    return {
-        ...state,
-        viewItem:action.payload
-    }
-  }
+  // if(action.type === 'VIEW__ITEM'){
+  //   console.log(action.payload)
+  //   return {
+  //       ...state,
+  //       viewItem:action.payload
+  //   }
+  // }
 
   return state;
 };
