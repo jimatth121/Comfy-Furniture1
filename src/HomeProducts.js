@@ -27,7 +27,7 @@ const HomeProducts = () => {
   return (
     <div className='home__products' id='homeproduct'>
        
-       <h2>
+       <h2 className=' text-lg font-bold'>
         We Feature Products That Makes Really Feels Like Home
        </h2>
        <div className='home__products__container'>

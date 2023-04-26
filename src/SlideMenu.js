@@ -17,7 +17,7 @@ const SlideMenu = (props) => {
      <Link to="/" onClick={handleMenuClick}>
       <span>Home</span>
      </Link>
-     <Link to="/testing" onClick={handleMenuClick}>
+     <Link to="/products" onClick={handleMenuClick}>
       <span>Products</span>
      </Link>
       <button>Login</button>
